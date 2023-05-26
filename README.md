@@ -35,6 +35,10 @@ The file must contain tab-separated values, sorted from old to recent. The retur
 must be in column "Returns (%)". Then, edit the fields in the data entry section in
 `block_bootstrap.py`. Once done, execute the file with python.
 
+### Example run
+
+![Figure_1](https://github.com/EduardGomezEscandell/block-bootsrapping/assets/47142856/3f420b8f-20d7-4244-96a7-39352116400c)
+
 ### References
 1. Cogneau, P., & Zakamouline, V. (2010). "Bootstrap methods for finance:
    Review and analysis".
