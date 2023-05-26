@@ -52,13 +52,13 @@ import os
 sample_size = 100_000
 
 # Duration of each simulation (in months)
-duration = 12 * 5
+duration = 12 * 20
 
 # Mean duration of the bootstrapping blocks (in months)
-block_mean_duration = 12 * 2
+block_mean_duration = 12 * 5
 
 # Path to the historical data file
-file_name = "data/MSCI World (1970-2023).csv"
+file_name = "data/S&P500 (1900-2023).csv"
 
 
 # PREPROCESSING
@@ -130,10 +130,6 @@ plt.legend()
 plt.grid()
 plt.xlabel("Time (months)")
 plt.ylabel("Returns")
-plt.title(
-    f"{sample_size} runs using overlapping blocks of geometrically distributed duration (μ={block_mean_duration/12:.2} years)",
-    fontsize=8,
-)
 
 # Plot density function of annualized returns
 plt.subplot(212)

@@ -5,7 +5,7 @@ used is bootstrapping. The goal is to use historical returns to predict future
 ones.
 
 ### Standard bootstrapping
-Efron (1979) developped a method wherein random samples are taken from the
+Efron (1979) developed a method wherein random samples are taken from the
 historical dataset and concatenated to generate a pseudohistory. By generating
 a large number of pseudo-histories, we can generate a probability distribution
 for the returns of the asset.
@@ -16,14 +16,14 @@ is autocorrelated, meaning that an asset's price depends on its history,
 particularly in the short term.
 
 ### Block bootstrapping
-In order to capture this effect, we concatenate blocks of historical data to
-create the pseudo-history. We also generate a large number of pseudohistories
-and study their aggregate behaviour. The methodology implemented was developped
-by Politis and Romano (1994).
+To capture this effect, we concatenate blocks of historical data to create the
+pseudo-history. We also generate a large number of pseudohistories and study
+their aggregate behavior. The methodology implemented was developed by Politis
+and Romano (1994).
 
 The size of each block is chosen randomly from a geometrical distribution, and
 the start of the block is chosen from a uniform distribution. If a block were
-to stretch beyond the end of history, it is wrapped around to the beggining;
+to stretch beyond the end of history, it is wrapped around to the beginning;
 essentially treating the historical dataset like a circular array.
 
 Replacement is allowed, meaning blocks may overlap. The mean length of a block
@@ -31,11 +31,19 @@ is a tuned parameter with no consensus on optimality.
 
 ### Usage
 You need a file containing monthly historical returns from the asset to study.
-The file must contain tab-separated values, sorted from old to recent. The returns
-must be in column "Returns (%)". Then, edit the fields in the data entry section in
-`block_bootstrap.py`. Once done, execute the file with python.
+The file must contain tab-separated values, sorted from old to recent. The
+returns must be in a column named "Returns (%)". Then, edit the fields in the
+data entry section in `block_bootstrap.py`. Once done, execute the file with
+Python.
 
 ### Example run
+This run samples the history of the S&P 500 index from 1900 to 2023 to simulate
+100k 20-year returns. The top figure shows some of the histories for
+illustrative purposes, and the bottom figure shows the distribution of returns
+after 20 years, with a piecewise 3rd-order polynomial fitting.
+
+Despite high skewness and kurtosis (fat-tails) in month-to-month stock returns,
+we see that after 20 years the distribution is highly normal.
 
 ![Figure_1](https://github.com/EduardGomezEscandell/block-bootsrapping/assets/47142856/3f420b8f-20d7-4244-96a7-39352116400c)
 
