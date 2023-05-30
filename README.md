@@ -38,14 +38,13 @@ Python.
 
 ### Example run
 This run samples the history of the S&P 500 index from 1900 to 2023 to simulate
-100k 20-year returns. The top figure shows some of the histories for
-illustrative purposes, and the bottom figure shows the distribution of returns
-after 20 years, with a piecewise 3rd-order polynomial fitting.
+1 million pseudohistories. It shows the distribution of returns year after year
+for 30 years, with a piecewise 3rd-order polynomial fitting.
 
 Despite high skewness and kurtosis (fat-tails) in month-to-month stock returns,
 we see that after 20 years the distribution is highly normal.
 
-![Figure_1](https://github.com/EduardGomezEscandell/block-bootsrapping/assets/47142856/3f420b8f-20d7-4244-96a7-39352116400c)
+![image](https://github.com/EduardGomezEscandell/block-bootstrapping/assets/47142856/61e98ca2-2563-4b51-b5ba-76ca006cf9ad)
 
 ### References
 1. Cogneau, P., & Zakamouline, V. (2010). "Bootstrap methods for finance:
