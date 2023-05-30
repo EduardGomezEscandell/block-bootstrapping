@@ -42,9 +42,9 @@ This run samples the history of the S&P 500 index from 1900 to 2023 to simulate
 for 30 years, with a piecewise 3rd-order polynomial fitting.
 
 Despite high skewness and kurtosis (fat-tails) in month-to-month stock returns,
-we see that after 20 years the distribution is highly normal.
+we see that after a few years the distribution is highly normal.
 
-![image](https://github.com/EduardGomezEscandell/block-bootstrapping/assets/47142856/61e98ca2-2563-4b51-b5ba-76ca006cf9ad)
+![ezgif com-gif-maker](https://github.com/EduardGomezEscandell/block-bootstrapping/assets/47142856/8238be25-105e-4c7f-8808-f114a6478420)
 
 ### References
 1. Cogneau, P., & Zakamouline, V. (2010). "Bootstrap methods for finance:
